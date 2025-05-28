@@ -91,51 +91,37 @@ python{
     }
 }
 📁 Project Structure
+```
 multi-format-intake-agent/
 ├── README.md
 ├── requirements.txt
 ├── docker-compose.yml
-├── .env.example
+├── Dockerfile
 ├── main.py
 ├── agents/
 │   ├── __init__.py
-│   ├── classifier.py
+│   ├── classifier_agent.py
 │   ├── json_agent.py
-│   ├── email_parser.py
+│   ├── email_parser_agent.py
 │   └── pdf_agent.py
 ├── memory/
 │   ├── __init__.py
-│   ├── redis_store.py
-│   ├── sqlite_store.py
-│   └── in_memory_store.py
+│   ├── memory_manager.py
+│   └── schemas.py
 ├── utils/
 │   ├── __init__.py
-│   ├── file_handlers.py
-│   ├── schema_validator.py
-│   └── logging_config.py
+│   ├── file_handler.py
+│   └── llm_client.py
 ├── data/
 │   ├── sample_inputs/
-│   │   ├── emails/
-│   │   ├── json/
-│   │   └── pdfs/
-│   └── schemas/
-│       ├── flowbit_schema.json
-│       └── crm_schema.json
-├── tests/
-│   ├── test_classifier.py
-│   ├── test_agents.py
-│   └── test_memory.py
-├── api/
-│   ├── __init__.py
-│   ├── fastapi_server.py
-│   └── routes/
-│       ├── upload.py
-│       ├── classify.py
-│       └── extract.py
-└── docs/
-    ├── api_documentation.md
-    ├── agent_specifications.md
-    └── deployment_guide.md
+│   │   ├── sample_invoice.pdf
+│   │   ├── sample_webhook.json
+│   │   └── sample_email.txt
+│   └── outputs/
+└── tests/
+    ├── __init__.py
+    └── test_agents.py
+```
 🔄 End-to-End Flow Example
 Scenario: RFQ Email with JSON Attachment
 
