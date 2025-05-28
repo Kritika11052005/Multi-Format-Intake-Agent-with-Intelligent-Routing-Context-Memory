@@ -231,7 +231,7 @@ Docker Deployment
 bash# Build and run with Docker Compose
 docker-compose up --build
 
-# API will be available at http://localhost:8000
+# API will be available at [http://localhost:8000](http://localhost:8000/docs)
 📋 Environment Configuration
 Required Environment Variables
 bash# .env file
